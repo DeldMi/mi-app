@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 .nvmrc
-.vscode
+# /.vscode
 
 # testing
 /coverage
