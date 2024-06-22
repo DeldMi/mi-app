@@ -1,16 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Menu.modie.css'; // Certifique-se de que este arquivo existe ou remova esta linha se não estiver a usar CSS
+import styles from './Header.module.css'; // Certifique-se de que este arquivo existe
 
-const Header = () => {
+const Header = ({ children }) => {
+    const [host, setHost] = useState(''); //pega dados
+
+    useEffect(() => {
+        setHost(window.location.pathname);
+    }, []);
+
+    const handleCentralButtonClick = () => {
+        window.location.href = "http://172.31.255.2";
+    };
+
     return (
-        <nav className="menu">
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-            </ul>
-        </nav>
+        <div>
+            <header>
+                <nav className={styles.menu}>
+                    <div className={styles.logo}>
+                        <Link to="/">
+                            <img src="logo192.png" alt="Logo" width="50px" />
+                        </Link>
+                    </div>
+                    <ul className={styles.navigation}>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/erro">Erro</Link></li>
+                    </ul>
+                    <div className={styles.centralButton}>
+                        <button onClick={handleCentralButtonClick}>
+                            Central
+                        </button>
+                    </div>
+                </nav>
+            </header>
+
+            {children}
+
+        </div>
     );
 };
 
