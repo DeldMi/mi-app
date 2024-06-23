@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import styles from './Login.module.css';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 
 const Login = () => {
@@ -32,6 +34,8 @@ const Login = () => {
 
 
     return (
+        <>
+        <Header />
         <div className={styles.loginContainer}>
             <form onSubmit={handleSubmit} className={styles.loginForm}>
                 <h2>Login</h2>
@@ -59,6 +63,8 @@ const Login = () => {
                 <button type="submit" className={styles.loginButton}>Entrar</button>
             </form>
         </div>
+        <Footer />
+        </>
     );
 }
 

@@ -2,10 +2,10 @@ header {
     background: #002224;
     background:
         linear-gradient(
-            0deg,
-            #002224e6 0%,
-            #090979e6 4%,
-            #00d4ffe6 100%
+            50deg,
+            #7a9595e6 0%,
+            #81819fe6 50%,
+            #889ea2e6 100%
         );   
     width: 100%;
     height: 5rem;
@@ -35,7 +35,7 @@ header .menu {
 .navigation{
     /* background-color: #fff; */
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(50px, auto);
     grid-auto-columns: 100px;
     align-content: center;
@@ -46,13 +46,17 @@ header .menu {
 
 .navigation li{
     width: 5rem;
-    color: #5825d8;
-    /* background-color: #5825; test */
+    margin: 10px;
+    padding-block: 5px;
     border-radius:5px;
+    
+    /* background-color: #5825; test */
+    
+    color: #5825d8;
     font-weight: 600;
     font-size: large;
-    margin: 10px;
     list-style-type: none;
+
     transition: 0.5s linear;
 
 }
@@ -60,7 +64,7 @@ header .menu {
 
 .navigation li:hover{
     color: #5825d8;
-    background-color: #5825;
+    background-color: #191ca155;
     border-radius:5px;
     font-weight: 900;
     border: #5825d8;
@@ -71,11 +75,14 @@ header .menu {
     text-decoration: none;
     text-align: center;
     display: block;
+    color: #fff;
 }
 
 .centralButton{
     width: auto;
     height: auto;
+
+    
     
 }
 
@@ -83,7 +90,7 @@ header .menu {
 .centralButton button{
     width: 5rem;
     height: 2rem;
-    background-color: #5825d8;
+    background-color: #191ca155;
     color: #fff;
     font-size: medium;
     font-weight: 600;
@@ -92,6 +99,14 @@ header .menu {
     transition: 0.5s;
     cursor: pointer;
 
+    margin-right: 1rem;
+
+}
+.centralButton button a{
+    color: #fff;
+    list-style-type: none;
+    text-decoration: none;
+    
 }
 
 .centralButton button:hover{
