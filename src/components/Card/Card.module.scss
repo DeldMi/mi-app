@@ -1,0 +1,58 @@
+@import '../../styles/variables';
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: $shadow-default;
+    background-color: $background-card-color;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow:$shadow-hover;
+    }
+}
+
+.cardImage {
+    // width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.cardContent {
+    padding: 10px;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: darken($text-primary-color, 80%);
+}
+
+.cardDescription {
+    font-size: 1rem;
+    color: darken($text-color, 60%) ;
+    margin-bottom: 10px;
+}
+
+.cardButton {
+    background-color: $primary-color;
+    color: $text-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+    &:active {
+        background-color: darken($secondary-color, 20%);
+        box-shadow:$shadow-active;
+    }
+    
+}
+

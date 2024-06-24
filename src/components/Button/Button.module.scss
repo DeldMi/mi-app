@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.button {
+    font-family: $font-family;
+    font-size: $font-size;
+    background-color: $primary-color;
+    color: $text-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        background-color: darken($secondary-color, 10%);
+        box-shadow: $shadow-hover;
+    }
+    &:active {
+        background-color: darken($primary-color, 20%);
+    }
+}

@@ -1,5 +1,7 @@
 import React from 'react';
-import * as Icons from './img'; // Importe os ícones do arquivo de índice (index.js)
+import * as Icons from '../../assets/icons'; // Importe os ícones do arquivo de índice (index.js)
+
+import styles from "./Icon.module.scss";
 
 const Icon = ({ name, style, title }) => {
     // Determine qual ícone utilizar com base no 'name'
@@ -11,7 +13,8 @@ const Icon = ({ name, style, title }) => {
     }
 
     return (
-        <SelectedIcon style={style} title={title} aria-label={title} />
+        <SelectedIcon style={style} title={title} aria-label={title} className={styles.icon}/>
+        
     );
 }
 

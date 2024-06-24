@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
+// import React, {  useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css'; // Certifique-se de que este arquivo existe
+import Button from '../Button';
 
 const Header = ({ children }) => {
-    const [host, setHost] = useState(''); //pega dados
+    // const [host, setHost] = useState(''); //pega dados
 
-    useEffect(() => {
-        setHost(window.location.pathname);
-    }, []);
+    // useEffect(() => {
+    //     setHost(window.location.pathname);
+    // }, []);
 
     const handleCentralButtonClick = () => {
         window.location.href = "http://172.31.255.2";
     };
 
     return (
-        <div>
             <header>
                 <nav className={styles.menu}>
                     <div className={styles.logo}>
@@ -31,18 +31,11 @@ const Header = ({ children }) => {
                     </ul>
                     <div className={styles.centralButton}>
                         
-                    <button><Link to="/login">Login</Link></button>
                         
-                        <button onClick={handleCentralButtonClick}>
-                            Central
-                        </button>
+                        <Button onClick={handleCentralButtonClick} text='Login'/>
                     </div>
                 </nav>
             </header>
-
-            {children}
-
-        </div>
     );
 };
 

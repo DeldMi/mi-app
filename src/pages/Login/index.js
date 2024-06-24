@@ -21,6 +21,7 @@ const Login = () => {
         login(email, password);
         if (userUUID) {
             navigate(`/dashboard/${userUUID}`);
+            navigate(`/Settings/${userUUID}`);
         }
         // if (userUUI) {
         //     // navigate(`/protected/${userUUID}`);
