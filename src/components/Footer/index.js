@@ -2,14 +2,18 @@
 import { Link } from 'react-router-dom';
 import style from './Footer.module.css';
 import Icon from '../Icon';
+import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 
 
 const Footer = () => {
     let inco = {
         width: '25px',
         height: '25px',
-        color: '#fff'
+        color: '#fff',
     };
+    
+    
+
     return (
 
         <>
@@ -30,22 +34,21 @@ const Footer = () => {
                         <ul>
 
                             <li id="instagram">
-                                <a href="#" target="_blank" title="instagram">
+                                <Link to="#header" target='_blank' title='instagram'>
                                     <Icon name='instagram' style={inco} />
-
-                                </a>
+                                </Link>
                             </li>
                             <li id="whatsapp">
-                                <a href="#" target="_blank" title="whatsapp">
+                                <Link to="#" target="_blank" title="whatsapp">
                                     <Icon name='whatsapp' style={inco} />
 
-                                </a>
+                                </Link>
                             </li>
                             <li id="linkedin">
-                                <a href="#" target="_blank" title="linkedin">
+                                <Link to="#" tLinkrget="_blank" title="linkedin">
                                     <Icon name='linkedin' style={inco} />
 
-                                </a>
+                                </Link>
                             </li>
 
 
@@ -68,8 +71,11 @@ const Footer = () => {
                 <div className={style.boletim}>
                     <p>Boletim de Novidades</p>
                 </div>
+                
             </nav>
+            
             <footer>
+                    <ScrollToTopButton  />
                 <p>&copy; 2024 André Felipe. Todos os direitos reservados.</p>
             </footer>
         </>

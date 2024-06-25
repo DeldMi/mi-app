@@ -108,14 +108,14 @@
     left: 0;
     z-index: -1;
     transform: scale(1);
-    transition: .4s;
-
+    transition: .4s ;
     background: #0174e7;
-    background: linear-gradient(0deg, #000000 0%, #090979 10%, #02b4d7 100%);
+    
 }
 
 .btn_social ul li:hover::before {
     transition: 0.4s;
+    background: linear-gradient(0deg, #000000 0%, #090979 10%, #0174e7 100%);
     top: 0%;
     
 }
