@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import style from './Container.module.css';
 
-const Container = ({ children, heightViews, heightViewMixs }) => {
+const Container = ({ children, heightViews }) => {
     const containerRef = useRef(null);
     const [isOverflow, setIsOverflow] = useState(false);
 

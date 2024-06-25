@@ -1,9 +1,10 @@
-// import React, {  useState } from 'react';
-import { Link } from 'react-router-dom';
+//
+import React from 'react';
 import styles from './Header.module.css'; // Certifique-se de que este arquivo existe
 import Button from '../Button';
+import { Link } from 'react-router-dom';
 
-const Header = ({ children }) => {
+const Header = () => {
     // const [host, setHost] = useState(''); //pega dados
 
     // useEffect(() => {

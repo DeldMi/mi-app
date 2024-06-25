@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../../components/Header';
+import Header from '../../components/Header/';
 import Footer from '../../components/Footer';
 import Container from '../../components/Container';
 import Parallax from './../../components/Parallax';
@@ -15,15 +15,15 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 
-    const inco = { 
-        width: '20px', 
-        height: '20px', 
-        color: '#666fff', 
+    const inco = {
+        width: '20px',
+        height: '20px',
+        color: '#666fff',
         marginLeft: "1rem"
     }
 
     const cards = {
-        
+
     }
 
 
@@ -74,7 +74,7 @@ const Home = () => {
                         textButton='Entar'
                         style={cards}
                     />
-                    
+
                 </div>
 
 
@@ -88,11 +88,11 @@ const Home = () => {
 
             <Modal isOpen={modalOpen} onClose={closeModal}>
                 <div className={styles.modalContent} >
-                    <h2>Conteúdo do Modal 
-                        <Icon name='whatsapp' style={inco} /> 
-                        </h2>
+                    <h2>Conteúdo do Modal
+                        <Icon name='whatsapp' style={inco} />
+                    </h2>
                     <p>Aqui você pode colocar qualquer conteúdo que desejar.<span> Voluptate aute adipisicing ex occaecat.</span></p>
-                    
+
                     <Link to="/Modal" ><Button onClick={closeModal} text='Fechar Modal' /></Link>
                 </div>
             </Modal>
