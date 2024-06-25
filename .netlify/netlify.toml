@@ -1,7 +1,7 @@
 [build]
 base = "."
-command = "npm rum build"
-publish = "./build/"
+command = "npm run build" 
+publish = "build"  
 
 [build.environment]
 REACT_APP_API_URL = "https://a3gs.com.br/api"
