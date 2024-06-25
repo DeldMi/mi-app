@@ -22,6 +22,9 @@ const Login = () => {
         if (userUUID) {
             navigate(`/dashboard/${userUUID}`);
             navigate(`/Settings/${userUUID}`);
+            
+        }else {
+            setError('Email ou senha inválidos.');
         }
         // if (userUUI) {
         //     // navigate(`/protected/${userUUID}`);
